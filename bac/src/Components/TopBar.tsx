@@ -8,14 +8,9 @@ import {
 function TopBar() {
 
     return(
-        <Box width="100%" height="75px" backgroundColor="#151B27">
+        <Box width="100%" height="80px" backgroundColor="#151B27">
             <Box display="flex" gap="45px">
-                <img src="../assets/logo.png" ></img>
-                <Text 
-                fontSize="2.5rem" 
-                fontWeight="normal" 
-                color="white" 
-                letterSpacing={"widest"}>BAC</Text>
+                <Image src="./src/assets/logo.png" width="180px" height="80px"></Image>
             </Box>
         </Box>
     )
