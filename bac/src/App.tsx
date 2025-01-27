@@ -3,6 +3,7 @@ import axios from "axios"
 import {Box,
 
 } from "@chakra-ui/react"
+import TopBar from "./Components/TopBar"
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <Box>
-      
+      <TopBar />
     </Box>
   )
 }
