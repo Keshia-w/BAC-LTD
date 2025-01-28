@@ -5,8 +5,10 @@ import {
     Menu,
     MenuItem,
     MenuList,
-    MenuButton
+    MenuButton,
+    Button
 } from "@chakra-ui/react"
+import { Link } from 'react-router-dom'
 
 function TopBar() {
 
@@ -16,9 +18,9 @@ function TopBar() {
                 <Image src="./src/assets/logo.png" width="180px" height="80px" marginLeft="15px"></Image>
                 
                 <Menu>
-                    <MenuItem>About Us</MenuItem>
-                    <MenuItem>Gallery</MenuItem>
-                    <MenuItem>Contact</MenuItem>
+                    <MenuItem as={Link} to="/about">About Us</MenuItem>
+                    <MenuItem as={Link} to="/gallery">Gallery</MenuItem>
+                    <MenuItem as={Link} to="/contact">Contact</MenuItem>
                 </Menu>
             </Box>
         </Box>
