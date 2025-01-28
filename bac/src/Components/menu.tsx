@@ -16,12 +16,14 @@ function MainMenu() {
     const {isOpen, onOpen, onClose} = useDisclosure();
     const btnRef = React.useRef<HTMLButtonElement>(null);
 
-    const styles ={
+    const textStyles = {
         color: "white",
         fontWeight: "semibold",
-        FontSize: "20px",
+        fontSize: "20px",
         marginTop: "40px",
-    }
+        textDecoration: "none",
+        _hover: { color: "#1A2236" }
+    };
 
     return(
         <Box>
@@ -30,7 +32,7 @@ function MainMenu() {
             backgroundColor="white"
             onClick={onOpen}
             aria-label='Open Menu'
-            icon={<HamburgerIcon />}
+            icon={<HamburgerIcon boxSize={8}/>}
             variant="solid"
             bg="#151B27"
             color="white"
@@ -45,16 +47,16 @@ function MainMenu() {
                 finalFocusRef={btnRef}>
 
                 <DrawerContent
-                maxH="350px"
+                maxH="355px"
                 overflow="auto">
 
-                    <DrawerCloseButton color="white" size="10px" marginTop="10px"/>
+                    <DrawerCloseButton color="white" size="10px" marginTop="18px"/>
 
                     <DrawerBody backgroundColor={"#151B27"} display="flex" flexDirection={"column"} paddingTop={"50px"}>
-                        <Text as={Link} to="/about" onClick={onClose} style={styles}>About us</Text>
-                        <Text as={Link} to="/gallery" onClick={onClose} style={styles}>Gallery</Text>
-                        <Text as={Link} to="/team" onClick={onClose} style={styles}>Our Team</Text>
-                        <Text as={Link} to="/contact" onClick={onClose} style={styles}>Contact us</Text>
+                        <Text as={Link} to="/about" onClick={onClose} style={textStyles}>About us</Text>
+                        <Text as={Link} to="/gallery" onClick={onClose} style={textStyles}>Projects</Text>
+                        <Text as={Link} to="/team" onClick={onClose} style={textStyles}>Our Team</Text>
+                        <Text as={Link} to="/contact" onClick={onClose} style={textStyles}>Contact us</Text>
                     </DrawerBody>
 
                 </DrawerContent>
