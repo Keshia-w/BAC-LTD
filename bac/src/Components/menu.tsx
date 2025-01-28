@@ -50,7 +50,7 @@ function MainMenu() {
                 maxH="355px"
                 overflow="auto">
 
-                    <DrawerCloseButton color="white" size="10px" marginTop="18px"/>
+                    <DrawerCloseButton color="white" size="10px" marginTop="18px" paddingRight="10px"/>
 
                     <DrawerBody backgroundColor={"#151B27"} display="flex" flexDirection={"column"} paddingTop={"50px"}>
                         <Text as={Link} to="/about" onClick={onClose} style={textStyles}>About us</Text>
