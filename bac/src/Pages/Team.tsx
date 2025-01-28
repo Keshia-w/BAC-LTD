@@ -4,7 +4,7 @@ import {
     Text,
 } from '@chakra-ui/react'
 
-function About () {
+function Team() {
     return(
         <Box>
             <Box         
@@ -18,10 +18,10 @@ function About () {
                 fontWeight="semibold" 
                 fontSize="28px" 
                 letterSpacing={"0.1rem"}
-                textAlign="center">About us</Text>
+                textAlign="center">Meet the Team</Text>
             </Box>
         </Box>
     )
 }
 
-export default About;
+export default Team;
