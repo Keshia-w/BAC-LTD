@@ -7,6 +7,7 @@ import TopBar from "./Components/TopBar"
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Gallery from './Pages/Gallery'
 import About from './Pages/About'
+import Team from './Pages/Team'
 import Contact from './Pages/Contact'
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
+            <Route path="/team" element={<Team />}></Route>
           </Routes>
         </Box>
       </HashRouter>
