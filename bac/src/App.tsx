@@ -4,6 +4,10 @@ import {Box,
 
 } from "@chakra-ui/react"
 import TopBar from "./Components/TopBar"
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Gallery from './Pages/Gallery'
+import About from './Pages/About'
+import Contact from './Pages/Contact'
 
 function App() {
 
@@ -17,9 +21,18 @@ function App() {
   }, [])
 
   return (
-    <Box>
-      <TopBar />
-    </Box>
+    <>
+      <HashRouter basename = "/">
+        <Box>
+          <TopBar />
+          <Routes>
+            <Route path="/gallery" element={<Gallery />}></Route>
+            <Route path="/about" element={<About />}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
+          </Routes>
+        </Box>
+      </HashRouter>
+    </>
   )
 }
 
